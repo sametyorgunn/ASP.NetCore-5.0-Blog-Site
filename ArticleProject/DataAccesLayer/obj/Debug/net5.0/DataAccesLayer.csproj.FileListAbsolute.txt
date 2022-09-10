@@ -1,0 +1,15 @@
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\bin\Debug\net5.0\DataAccesLayer.deps.json
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\bin\Debug\net5.0\DataAccesLayer.dll
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\bin\Debug\net5.0\DataAccesLayer.pdb
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\bin\Debug\net5.0\EntityLayer.dll
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\bin\Debug\net5.0\EntityLayer.pdb
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\obj\Debug\net5.0\DataAccesLayer.csproj.AssemblyReference.cache
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\obj\Debug\net5.0\DataAccesLayer.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\obj\Debug\net5.0\DataAccesLayer.AssemblyInfoInputs.cache
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\obj\Debug\net5.0\DataAccesLayer.AssemblyInfo.cs
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\obj\Debug\net5.0\DataAccesLayer.csproj.CoreCompileInputs.cache
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\obj\Debug\net5.0\DataAccesLayer.csproj.CopyComplete
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\obj\Debug\net5.0\DataAccesLayer.dll
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\obj\Debug\net5.0\refint\DataAccesLayer.dll
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\obj\Debug\net5.0\DataAccesLayer.pdb
+C:\Users\asame\source\repos\ArticleProject\DataAccesLayer\obj\Debug\net5.0\ref\DataAccesLayer.dll

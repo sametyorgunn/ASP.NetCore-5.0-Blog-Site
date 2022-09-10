@@ -1,0 +1,33 @@
+﻿@using EntityLayer.Concrete
+@model List<AppUser>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Ad soyad</th>
+      <th scope="col">kullanıcı Adı</th>
+      <th scope="col">Mail</th>
+      <th scope="col">Aktif Yap</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var i in Model)
+    {
+    <tr>
+      <th scope="row">@i.Id</th>
+      <td>@i.namesurname</td>
+      <td>@i.UserName</td>
+      <td>@i.Email</td>
+      <td><a href="/Admin/AdminUyeKayitOnay/AktifYap/@i.Id" class="btn btn-primary">aktif yap</a></td>
+    </tr>
+    }
+  </tbody>
+</table>
+
+@section scripts{
+    }

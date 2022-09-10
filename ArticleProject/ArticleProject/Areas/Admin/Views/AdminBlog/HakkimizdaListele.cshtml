@@ -1,0 +1,38 @@
+﻿@using EntityLayer.Concrete
+@model List<About>
+@{
+    ViewData["Title"] = "HakkimizdaListele";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<table class="table">
+  <thead>
+    <tr>
+      <th hidden scope="col">#</th>
+      <th scope="col">Başlık</th>
+      <th scope="col"> içerik</th>
+      <th scope="col">Resim</th>
+      <th scope="col">düzenle</th>
+      <th scope="col">Sil</th>
+    </tr>
+  </thead>
+  <tbody>
+    @foreach(var i in Model)
+    {
+    <tr>
+      <th hidden scope="row">@i.AboutID</th>
+      <td>@i.Hakkimizda_baslik</td>
+      <td>@i.Hakkimizda_icerik</td>
+      <td><img src="~/HakkimizdaResim/@i.Hakkimizda_resim_yol" style="width:100%;" /></td>
+      <td><a class="btn btn-info" href="/Admin/AdminBlog/HakkimizdaDuzenle/@i.AboutID">Düzenle</a></td>
+      <td><a class="btn btn-danger" href="/Admin/AdminBlog/HakkimizdaSil/@i.AboutID">Sil</a></td>
+
+    </tr>
+
+    }
+  </tbody>
+</table>
+
+@section scripts{
+    }
+

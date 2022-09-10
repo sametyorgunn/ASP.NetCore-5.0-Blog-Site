@@ -1,0 +1,30 @@
+﻿
+@{
+    ViewData["Title"] = "HakkimizdaEkle";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+  <div class="form-group mb-2">
+    <label for="exampleFormControlInput1">Hakkımızda başlık</label>
+    <input type="text" name="Hakkimizda_baslik" class="form-control" id="exampleFormControlInput1" placeholder="">
+  </div>
+  <br />
+  <div class="form-group mb-2">
+    <label for="exampleFormControlTextarea1">Hakkimizda Text</label>
+    <textarea class="form-control" name="Hakkimizda_icerik" id="exampleFormControlTextarea1" rows="3"></textarea>
+  </div>
+  <br />
+   <div class="form-group mb-2">
+    <label for="exampleFormControlFile1"> Hakkımızda Resim Yükle</label>
+    <input type="file" name="Hakkimizda_resim" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <button type="submit">kaydet</button>
+</form>
+
+<br />
+<a class="btn btn-primary" href="/Admin/AdminBlog/HakkimizdaListele/">Hakkımızda Listesi</a>
+
+
+@section scripts{
+    }

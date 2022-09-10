@@ -1,0 +1,71 @@
+﻿@using EntityLayer.Concrete
+@model List<Blog>
+@{
+    ViewData["Title"] = "Index";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<!DOCTYPE html>
+<html>
+
+
+<body>
+
+        <div class="wrapper wrapper-content animated fadeInRight">
+            <div class="row">
+                @foreach(var item in Model)
+                {
+                <div class="col-md-3">
+                    <div class="ibox">
+                        <div class="ibox-content product-box">
+
+                            <div>
+                                <img src="~/BlogImg/@item.BlogImgurl" height="225" width="240"/>
+                            </div>
+                            <div class="product-desc">
+                                <span class="product-price">
+                                    @(((DateTime)item.BlogCreateDate).ToString("dd-MMM-yyyy"))
+                                </span>
+                               
+                                <small class="text-muted">@item.Category.CategoryName</small>
+                                <a href="#" class="product-name"> @item.BlogTitle</a>
+
+                                <div class="small m-t-xs">
+                                    @item.BlogContent.Substring(0,@item.BlogContent.Substring(0,10).LastIndexOf(" "))...
+                                </div>
+                                <div class="m-t text-righ">
+                                   Blog Durumu: <div>@item.BlogStatus</div>
+                                    <a href="/Blog/BlogReadAll/@item.BlogID" class="btn btn-xs btn-outline btn-primary">Info <i class="fa fa-long-arrow-right"></i>Detaylar</a>
+                                   
+                                    <a class="btn btn-primary" href="/Admin/AdminBlog/BlogPasifYap/@item.BlogID">Pasif Yap</a>
+                                    <br>
+                                    <a class="btn btn-primary" href="/Admin/AdminBlog/BlogAktifYap/@item.BlogID">Aktif Yap</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                }
+            </div>
+        </div>
+      
+
+
+<!-- Mainly scripts -->
+<script src="js/jquery-3.1.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+<script src="js/plugins/metisMenu/jquery.metisMenu.js"></script>
+<script src="js/plugins/slimscroll/jquery.slimscroll.min.js"></script>
+
+<!-- Custom and plugin javascript -->
+<script src="js/inspinia.js"></script>
+<script src="js/plugins/pace/pace.min.js"></script>
+  @section scripts{
+    }
+
+</body>
+
+</html>
+
+

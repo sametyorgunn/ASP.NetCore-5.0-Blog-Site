@@ -1,0 +1,32 @@
+﻿@model EntityLayer.Concrete.About
+@{
+    ViewData["Title"] = "HakkimizdaDuzenle";
+    Layout = "~/Views/Shared/Admin_Layout.cshtml";
+}
+
+<form method="post" enctype="multipart/form-data">
+   <div hidden class="form-group mb-2">
+    <label for="exampleFormControlInput1">Hakkımızda id</label>
+    <input type="text" name="AboutID" value="@Model.AboutID" class="form-control" id="exampleFormControlInput1" placeholder="">
+  </div>
+  <div class="form-group mb-2">
+    <label for="exampleFormControlInput1">Hakkımızda başlık</label>
+    <input type="text" name="Hakkimizda_baslik" value="@Model.Hakkimizda_baslik" class="form-control" id="exampleFormControlInput1" placeholder="">
+  </div>
+  <br />
+  <div class="form-group mb-2">
+    <label for="exampleFormControlTextarea1">Hakkimizda Text</label>
+    <textarea class="form-control" name="Hakkimizda_icerik" id="exampleFormControlTextarea1" rows="3">@Model.Hakkimizda_icerik</textarea>
+  </div>
+  <br />
+   <div class="form-group mb-2">
+    <label for="exampleFormControlFile1"> Hakkımızda Resim Yükle</label>
+    <input type="file" name="Hakkimizda_resim" value="@Model.Hakkimizda_resim_yol" class="form-control-file" id="exampleFormControlFile1">
+  </div>
+  <button type="submit">güncelle</button>
+</form>
+
+
+@section scripts{
+    }
+

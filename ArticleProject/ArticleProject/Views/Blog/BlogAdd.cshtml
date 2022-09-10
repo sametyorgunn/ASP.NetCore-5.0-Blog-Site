@@ -1,0 +1,39 @@
+﻿@model EntityLayer.Concrete.Blog;
+
+@{
+    ViewData["Title"] = "BlogAdd";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+<h1>Yeni blog ekle</h1>
+<br />
+@using (Html.BeginForm("BlogAdd","Blog",FormMethod.Post, new 
+                                       { enctype = "multipart/form-data" }))
+{
+    @Html.Label("blog başlığı")
+    @Html.TextBoxFor(x=>x.BlogTitle,new{@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogTitle)
+    <br />
+  @*  @Html.Label("blog görseli")
+    @Html.TextBoxFor(x=>x.BlogImg,new{@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogImg)
+    <br />*@
+    <br />
+     @Html.Label("Blog resmi")<br />
+     @Html.TextBoxFor(x=>x.BlogImg, new { @type="file",@required="required"})
+  @*  @Html.Label("blog küçük görsel")
+    @Html.TextBoxFor(x=>x.BlogThumbnailImg,new{@class="form-control"})
+    <br />*@
+    <br />
+
+    @Html.Label("kategori")
+    @Html.DropDownListFor(x => x.CategoryID,(List<SelectListItem>)ViewBag.v, new{@class="form-control"})
+    <br />
+    @Html.Label("blog içeriği")
+    @Html.TextAreaFor(x=>x.BlogContent,10,3,new{@class="form-control"})
+    @Html.ValidationMessageFor(x=>x.BlogContent)
+    <br />
+    <button class="btn btn-info">Yazıyı kaydet</button>
+
+}
+
+

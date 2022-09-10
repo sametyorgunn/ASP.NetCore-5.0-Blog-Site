@@ -1,0 +1,140 @@
+﻿@using EntityLayer.Concrete
+@model About
+@{
+    ViewData["Title"] = "Hakkimizda";
+    Layout = "~/Views/Shared/UserLayout.cshtml";
+}
+
+<!DOCTYPE html>
+<html lang="zxx">
+<body>
+    <section class="banner-bottom">
+        <!--/blog-->
+        <div class="container">
+            <div class="row">
+                <!--left-->
+                <div class="col-lg-8 left-blog-info-w3layouts-agileits text-left">
+
+                    <div class="blog-grid-top">
+                        <div class="b-grid-top">
+                            <div class="blog_info_left_grid">
+                                <a href="single.html">
+                                    <img src="~/HakkimizdaResim/@Model.Hakkimizda_resim_yol" class="img-fluid" alt="">
+                                </a>
+                            </div>
+                        </div>
+                        <h3>
+                            <a href="single.html">@Model.Hakkimizda_baslik </a>
+                        </h3>
+                        <p>@Model.Hakkimizda_icerik</p>
+                        @*						<a href="/Blog/Index/" class="btn btn-primary read-m"></a>
+                        *@
+                    </div>
+
+
+
+                    <!--Section: Contact v.2-->
+                    <section class="mb-4">
+
+                        <!--Section heading-->
+                        <h2 class="h1-responsive font-weight-bold text-center my-4">Bizimle iletişime Geç </h2>
+                        <!--Section description-->
+
+                        <div class="row">
+
+                            <!--Grid column-->
+                            <div class="col-md-9 mb-md-0 mb-5">
+                                <form id="contact-form" name="contact-form" action="/Blog/iletisimMesajGonder/" method="post">
+
+                                    <!--Grid row-->
+                                    <div class="row">
+
+                                        <!--Grid column-->
+                                        <div class="col-md-6">
+                                            <div class="md-form mb-0">
+                                                <input type="text" id="isim" name="isimsoyisim" class="form-control">
+                                                <label for="name" class="">isim</label>
+                                            </div>
+                                        </div>
+                                        <!--Grid column-->
+                                        <!--Grid column-->
+                                        <div class="col-md-6">
+                                            <div class="md-form mb-0">
+                                                <input type="text" id="mail" name="mail" class="form-control">
+                                                <label for="email" class="">Mail</label>
+                                            </div>
+                                        </div>
+                                        <!--Grid column-->
+
+                                    </div>
+                                    <!--Grid row-->
+                                    <!--Grid row-->
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <div class="md-form mb-0">
+                                                <input type="text" id="konu" name="konu" class="form-control">
+                                                <label for="subject" class="">Konu</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--Grid row-->
+                                    <!--Grid row-->
+                                    <div class="row">
+
+                                        <!--Grid column-->
+                                        <div class="col-md-12">
+
+                                            <div class="md-form">
+                                                <textarea type="text" id="icerik" name="mesaj" rows="2" class="form-control md-textarea"></textarea>
+                                                <label for="message">Mesaj</label>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <!--Grid row-->
+
+                                </form>
+
+                                <div class="text-center text-md-left">
+                                    <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Gönder</a>
+                                </div>
+                                <div class="status"></div>
+                            </div>
+                            <!--Grid column-->
+                            <!--Grid column-->
+                            <div class="col-md-3 text-center">
+                                <ul class="list-unstyled mb-0">
+                                    <li>
+                                        <i class="fas fa-map-marker-alt fa-2x"></i>
+                                        <p>San Francisco, CA 94126, USA</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fas fa-phone mt-4 fa-2x"></i>
+                                        <p>+ 01 234 567 89</p>
+                                    </li>
+
+                                    <li>
+                                        <i class="fas fa-envelope mt-4 fa-2x"></i>
+                                        <p>contact@mdbootstrap.com</p>
+                                    </li>
+                                </ul>
+                            </div>
+                            <!--Grid column-->
+
+                        </div>
+
+                    </section>
+                    <!--Section: Contact v.2-->
+
+
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+    <!--//main-->
+</body>
+
+</html>
